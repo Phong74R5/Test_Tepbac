@@ -1,0 +1,4 @@
+build
+main/Kconfig.projbuild
+dependencies.lock
+sdkconfig
