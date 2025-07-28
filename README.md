@@ -20,6 +20,7 @@ This project uses an **ESP32** board, a **DHT11 sensor**, an **OLED SSD1306 disp
   - DHT11 sensor
   - OLED SSD1306 (I2C)
   - 2 LEDs + resistors
+  - Buzzer
   - Wires + Res + breadboard
 
 ### 📊 Dashboard (Adafruit IO):
@@ -36,8 +37,9 @@ Then build a dashboard with:
 ---
 
 ## 📁 Project Structure
-
-<img src="./img/Screenshot_20250728_210114.png" style="display: block; margin: 0 auto;">
+<div align="center">
+<img src="./img/Screenshot_20250728_210114.png">
+</div>
 
 ---
 
@@ -50,6 +52,7 @@ Then build a dashboard with:
 | OLED SCL   | GPIO22     |
 | LED1       | GPIO18     |
 | LED2       | GPIO19     |
+| Buzzer     | GPIO2      |
 
 - DHT11, OLED SCL and OLED SDA needs a 10kΩ pull-up resistor on the DATA pin  
 - All devices powered by 3.3V from ESP32
@@ -79,20 +82,23 @@ Then build a dashboard with:
 - Sends data to MQTT every 10 seconds
 - Receives LED control commands from dashboard
 - Displays all information on OLED
-- Shows warning when temperature is too high
+- Shows warning when temperature is too high, the buzzer will sound
 
 ---
 
 ## 📈 Functional Diagram
-
-<img src="./img/Diagram.drawio.png" style="display: block; margin: 0 auto;">
+<div align="center">
+  <img src="./img/Diagram.drawio.png">
+</div>
 
 ---
 
 ## 📺 Example Output
 
 ### OLED Display
-<img src="./img/d1baac3aa4132d4d7402.jpg" style="display: block; margin: 0 auto;">
+<div align="center">
+  <img src="./img/d1baac3aa4132d4d7402.jpg">
+</div>
 
 ### Terminal Log
 ```log
@@ -101,7 +107,9 @@ I (20400) MQTT_TASK: Received on topic: led1 | data: 1
 I (20401) MQTT_TASK: LED1 set to: 1
 ```
 ### Dashboard
-<img src="./img/Screenshot_20250728_203019.png" style="display: block; margin: 0 auto;">
+<div align="center">
+  <img src="./img/Screenshot_20250728_203019.png">
+</div>
 
 ---
 ## System Protection
